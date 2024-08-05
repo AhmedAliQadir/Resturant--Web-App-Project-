@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AQ Restaurant</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js
+
+</head>
+
+<body>
+    <!-- header section starts -->
+
+    <header>
+
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <a class="navbar-brand" href="#">AQ Restaurant</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="order.html">Order & Info</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="alert.html">Food Alert</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="bill.html">Bill Calculator<span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+    </header>
+    <!-- header section ends -->
+</body>
+<!-- created a div with row class then add two divs with 6 columnes each. Also use bootstrap card to show data -->
+<div class="row ml-2">
+    <div class="col-6">
+        <div class="d-flex justify-content-left mt-5">
+            <div class="card">
+                <div class="card-header">
+                    Bill Calculator
+                </div>
+                <div class="card-body">
+                    <h6 class="card-title">Please select your food item and quantity:</h6>
+                    <form name="billform" id="billform" method="post">
+                        <div class="form-row">
+
+                            <div class="col-md-4 mb-1">
+                                <label for="validationServer01"><b>Food Item</b></label>
+                            </div>
+                            <div class="col-md-2 mb-1">
+                                <label for="validationServer02"><b>Price</b></label>
+                            </div>
+                            <div class="col-md-6 mb-1">
+                                <label for=""><b>Quantity</b></label>
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="form-row">
+
+                            <div class="col-md-4 mb-1">
+                                <label class="form-control" style="border-color:white;" id="validationServer01">Garlic Bread:</label>
+
+                            </div>
+                            <div class="col-md-2 mb-1">
+                                <label class="form-control" style="border-color:white;" id="validationServer02">£3</label>
+
+                            </div>
+                            <div class="col-md-6 mb-1 qtygarlic-num">
+                                <input type="number" class="form-control" id="qtygarlic" name="qtygarlic" placeholder="Garlic Bread Qty">
+                                <span class="grerror" style="color: red; display: none">* Input digits only</span>
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="form-row">
+
+                            <div class="col-md-4 mb-1">
+                                <label class="form-control" style="border-color:white;" id="validationServer01">Pizza:</label>
+
+                            </div>
+                            <div class="col-md-2 mb-1">
+                                <label class="form-control" style="border-color:white;" id="validationServer02">£9</label>
+
+                            </div>
+                            <div class="col-md-6 mb-1 pizza-num">
+                                <input type="number" class="form-control mt-2" id="qtypizaa" name="qtypizaa" placeholder="Pizaa Qty">
+                                <span class="pzerror" style="color: red; display: none">* Input digits only</span>
+                            </div>
+
+
+                        </div>
+
+                        <div class="form-row">
+
+                            <div class="col-md-4 mb-1">
+                                <label class="form-control" style="border-color:white;" id="validationServer01">Italian Pasta:</label>
+
+                            </div>
+                            <div class="col-md-2 mb-1">
+                                <label class="form-control" style="border-color:white;" id="validationServer02">£8</label>
+
+                            </div>
+                            <div class="col-md-6 mb-1  pasta-num">
+                                <input type="number" class="form-control mt-2" id="qtypasta" name="qtypasta" placeholder="Pasta Qty">
+                                <span class="paserror" style="color: red; display: none">* Input digits only</span>
+
+                            </div>
+
+
+                        </div>
+
+                        <div class="form-row">
+
+                            <div class="col-md-4 mb-1">
+                                <label class="form-control" style="border-color:white;" id="validationServer01">Lemonade:</label>
+
+                            </div>
+                            <div class="col-md-2 mb-1">
+                                <label class="form-control" style="border-color:white;" id="validationServer02">£2</label>
+
+                            </div>
+                            <div class="col-md-6 mb-1 lemon-num">
+                                <input type="number" class="form-control mt-2" id="qtylemon" name="qtylemon" placeholder="Lemonade Qty">
+                                <span class="lmerror" style="color: red; display: none">* Input digits only</span>
+
+                            </div>
+
+
+                        </div>
+
+                        <div class="form-row">
+                            <div class="col-md-4 mb-1">
+                                <label class="form-control" style="border-color:white;" id="validationServer01">Juice:</label>
+                            </div>
+                            <div class="col-md-2 mb-1">
+                                <label class="form-control" style="border-color:white;" id="validationServer02">£2.5</label>
+                            </div>
+                            <div class="col-md-6 mb-1 juice-num">
+                                <input type="number" class="form-control mt-2" id="qtyjuice" name="qtyjuice" placeholder="Juice Qty">
+                                <span class="jcerror" style="color: red; display: none">* Input digits only</span>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-row ">
+                            <div class="col-md-4 mb-1 ">
+                                <label class="form-control " style="border-color:white; " id="validationServer01 ">Tip:</label>
+                            </div>
+                            <div class="col-md-4 mb-1 ">
+                                <select class="custom-select" id="drptip">
+                                <option selected value="0">Choose...</option>
+                                <option value="percent">Tip in %</option>
+                                <option value="pound">Tip in £</option>                                
+                              </select>
+                            </div>
+                            <div class="col-md-4 mb-1 tip-num">
+                                <input type="number" class="form-control " id="tip " name="tip" placeholder="Enter amount">
+                                <span class="tiperror " style="color: red; display: none ">* Input digits only</span>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="col-md-4 mb-1">
+                                <label class="form-control" style="border-color:white;" id="validationServer01">Comments:</label>
+                            </div>
+
+                            <div class="col-md-8 mb-1">
+                                <textarea rows="4" cols="50" class="form-control mt-2" id="comments" name="comments" placeholder=" Please Comment here "></textarea>
+                                <!-- <span class=" jcerror " style="color: red; display: none ">* Input digits only</span> -->
+                            </div>
+                        </div>
+
+
+
+                        <button class="btn btn-primary " type="submit ">Submit form</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="d-flex justify-content-right mt-5">
+            <div class="card">
+                <div class="card-header ">
+                    <b>Bill Overview</b>
+                </div>
+                <div class="card-body m-3 ">
+                    <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Total Food Cost :
+                            <span class="ml-3 badge badge-primary badge-pill" id="foodcost">£0</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Total Juice Cost :
+                            <span class="ml-3 badge badge-primary badge-pill" id="juicecost">£0</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Total Tip :
+                            <span class="ml-3 badge badge-primary badge-pill" id="totaltip">£0</span>
+                        </li>
+
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <b>Total Order Cost:</b>
+                            <span class="ml-3 badge badge-primary badge-pill" id="ordertotal">£0</span>
+                        </li>
+
+
+                    </ul>
+                </div>
+
+                <div class="card-footer ">
+                    <span id="spncomments"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- footer start -->
+<footer class="bd-footer text-muted ">
+    <div class="container-fluid p-3 p-md-5 ">
+
+        <p style="text-align: center ">Designed and built by Ahmed Ali Qadir</a>
+            with the help of Mr Jacob, Keonig</p>
+    </div>
+    <p style="text-align: center "> Copyright &copy; 2021-
+        <script>
+            document.write(new Date().getFullYear())
+        </script> Ahmed Ali Qadir All Rights Reserved
+    </p>
+</footer>
+<!-- footer start -->
+<!-- custom js file link -->
+<script src="js/script.js "></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js "></script>
+
+<script src="js/form-validation.js "></script>
+</body>
+
+</html>
