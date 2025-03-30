@@ -1,5 +1,5 @@
 Overview of the UNIVERSITY COURSEWORK - Project
-The project is a website for "AQ Restaurant," a fictional or conceptual restaurant. It consists of multiple web pages that provide different functionalities to enhance the user experience. Below is a summary of the different components and their purposes:
+The project is a website for "AQ Restaurant," a conceptual restaurant. It consists of multiple web pages that provide different functionalities to enhance the user experience. Below is a summary of the different components and their purposes:
 
 1. Main Page (index.html)
 Purpose: Introduces the restaurant and provides a welcoming message.
